@@ -1,7 +1,7 @@
 import './App.css';
 import React, {useState} from 'react'
 import List from './components/List';
-
+import Header from './components/Header';
 
 function App() {
   const [inputValue, setInputValue] = useState('');
@@ -11,12 +11,12 @@ function App() {
     setInputValue(e.target.value);
   }
 
-  const handleClick = (inputValue) => {
+  const handleClick = (e, inputValue) => {
     setTodo([...todos, inputValue]);
   }
   return (
     <div className="App">
-      <h1>TodoList</h1>
+      <Header/>
       <input type="text" onChange={handleInputValue}/>
       <button onClick={() => handleClick(inputValue)}>Create Todo</button>
       <List todos={todos}/>
