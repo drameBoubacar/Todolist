@@ -11,7 +11,7 @@ function App() {
     setInputValue(e.target.value);
   }
 
-  const handleClick = (e, inputValue) => {
+  const handleClick = (inputValue) => {
     setTodo([...todos, inputValue]);
   }
   return (

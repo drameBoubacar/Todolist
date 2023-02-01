@@ -1,4 +1,5 @@
 import React from 'react';
+import '../App.css';
 
 const List = ({todos}) => {
 
@@ -6,7 +7,7 @@ const List = ({todos}) => {
         <>
             {todos.map((todo, i) => {
                 return <ul>
-                    <li index={i}>{todo}</li>
+                    <li index={i} className="todo-item">{todo}</li>
                 </ul>
             })}
         </>
