@@ -12,14 +12,14 @@ function App() {
   }
 
   const handleClick = (inputValue) => {
-    setTodo([...todos, inputValue])
+    setTodo([...todos, inputValue]);
   }
   return (
     <div className="App">
       <h1>TodoList</h1>
       <input type="text" onChange={handleInputValue}/>
-      <button onClick={() => handleClick(inputValue)}>Create</button>
-      <List/>
+      <button onClick={() => handleClick(inputValue)}>Create Todo</button>
+      <List todos={todos}/>
     </div>
   );
 }
